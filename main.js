@@ -18,7 +18,7 @@ let cantidad;
 const calcularTotal = (precio, cantidad) => precio * cantidad;
 
 const compra = (cantidad, producto, total) => `Tu pedido son ${cantidad} hamburguesa/s de la variedad ${producto}, el total seria $${total}`;
-const resumenCompra = (posicion) => compra(cantidad, productos[posicion].nombre, calcularTotal(productos[posicion].precio, cantidad));
+const resumenCompra = (posicion) => alert(compra(cantidad, productos[posicion].nombre, calcularTotal(productos[posicion].precio, cantidad)));
 
 function iniciarCompra() {
     producto = prompt(`Bienvenido a la Hamburgueseria!
@@ -36,17 +36,17 @@ function iniciarCompra() {
 
     if (producto && cantidad >= 1) {
         switch (producto) {
-            case productos[0].nombre.toLowerCase(): alert(resumenCompra(0))
+            case productos[0].nombre.toLowerCase(): resumenCompra(0)
                 break;
-            case productos[1].nombre.toLowerCase(): alert(resumenCompra(1))
+            case productos[1].nombre.toLowerCase(): resumenCompra(1)
                 break;
-            case productos[2].nombre.toLowerCase(): alert(resumenCompra(2))
+            case productos[2].nombre.toLowerCase(): resumenCompra(2)
                 break;
-            case productos[3].nombre.toLowerCase(): alert(resumenCompra(3))
+            case productos[3].nombre.toLowerCase(): resumenCompra(3)
                 break;
-            case productos[4].nombre.toLowerCase(): alert(resumenCompra(4))
+            case productos[4].nombre.toLowerCase(): resumenCompra(4)
                 break;
-            case productos[5].nombre.toLowerCase(): alert(resumenCompra(5))
+            case productos[5].nombre.toLowerCase(): resumenCompra(5)
                 break;
             default: alert("Escribiste un producto invalido, volvé a intentar")
                 iniciarCompra();
